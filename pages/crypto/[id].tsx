@@ -26,7 +26,7 @@ function Cryptodetail() {
 
                 {time.map((period: any) => {
                     return (
-                        <option value={period}>{period}</option>
+                        <option key={period} value={period}>{period}</option>
                     )
                 })}
             </Select>
@@ -119,7 +119,7 @@ function Cryptodetail() {
 
                         {data?.data.coin.links.map((link: any) => {
                             return (
-                                <Box _hover={{
+                                <Box key={link.name} _hover={{
                                     backgroundColor: 'gray.100'
 
                                 }}>
